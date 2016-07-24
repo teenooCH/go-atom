@@ -1,4 +1,4 @@
-FROM teenooch/golang-plus:1.6.2
+FROM teenooch/golang-plus:1.6.3
 
 MAINTAINER Martin Purmann <tinu.public@generalmail.com>
 
