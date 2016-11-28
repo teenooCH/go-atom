@@ -3,24 +3,24 @@ FROM teenooch/golang-plus:1.7.3
 MAINTAINER Martin Purmann <tinu.public@generalmail.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      git \
-      curl \
       ca-certificates \
-      libgtk2.0-0 \
-      libxtst6 \
-      libnss3 \
-      libgconf-2-4 \
-      libasound2 \
-      fakeroot \
+      curl \
+      git \
       gconf2 \
       gconf-service \
-      libcap2 \
-      libnotify4 \
-      libxtst6 \
-      libnss3 \
       gvfs-bin \
-      xdg-utils \
+      fakeroot \
+      libasound2 \
+      libcap2 \
+      libgconf-2-4 \
+      libgtk2.0-0 \
+      libnotify4 \
+      libnss3 \
+      libxkbfile1 \
+      libxss1 \
+      libxtst6 \
       python \
+      xdg-utils \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -d /home/atom -m atom
