@@ -25,6 +25,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -d /home/atom -m atom
 
+#-----------------------------------------------------------------
+
 ENV ATOM_VERSION v1.12.7
 ENV ATOM_DOWNLOAD_URL https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb
 
