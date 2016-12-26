@@ -33,6 +33,8 @@ RUN curl -L "$ATOM_DOWNLOAD_URL" -o atom.deb \
   && rm -f atom.deb \
   && rm -rf /var/lib/apt/lists/*
 
+#-----------------------------------------------------------------
+
 USER atom
 
 RUN git clone --depth 1 https://github.com/teenooCH/dotfiles.git \
