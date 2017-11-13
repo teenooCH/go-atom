@@ -1,4 +1,4 @@
-FROM teenooch/golang-plus:1.8.3
+FROM teenooch/golang-plus:latest
 
 MAINTAINER Martin Purmann <tinu.public@generalmail.com>
 
@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 #-----------------------------------------------------------------
 
-ENV ATOM_VERSION v1.17.2
+ENV ATOM_VERSION v1.22.0
 ENV ATOM_DOWNLOAD_URL https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb
 
 RUN curl -L "$ATOM_DOWNLOAD_URL" -o atom.deb \
