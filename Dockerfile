@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       libgtk2.0-0 \
       libnotify4 \
       libnss3 \
+      libx11-xcb1 \
       libxkbfile1 \
       libxss1 \
       libxtst6 \
@@ -40,7 +41,7 @@ RUN curl -L "$ATOM_DOWNLOAD_URL" -o atom.deb \
 USER atom
 
 RUN git clone --depth 1 https://github.com/teenooCH/dotfiles.git \
-  && cp dotfiles/go-atom/bashrc_alias $HOME/.bashrc_alias; cp dotfiles/go-atom/bashrc $HOME/.bashrc \
+  && cp dotfiles/docker_env/bashrc_alias $HOME/.bashrc_alias; cp dotfiles/docker_env/bashrc $HOME/.bashrc \
   && ( cd dotfiles/atom; ./setupAtom.sh atom ) \
   && rm -rf dotfiles
 
