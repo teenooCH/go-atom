@@ -1,6 +1,6 @@
 FROM teenooch/golang-plus:latest
 
-MAINTAINER Martin Purmann <tinu.public@generalmail.com>
+LABEL maintainer="Martin Purmann <tinu.public@generalmail.com>"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
       ca-certificates \
